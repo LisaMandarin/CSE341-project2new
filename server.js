@@ -6,7 +6,7 @@ const app = express()
 const port = process.env.PORT
 const mongodbURI = process.env.MONGODB_URI
 const connectDB = require("./models/index")
-const router = require("./routes/index")
+const router = require("./routes")
 
 
 
