@@ -56,4 +56,52 @@ const findById = async (req, res, next) => {
     }
 }
 
-module.exports = { findAll, findById }
+const findByQuery = async (req, res, next) => {
+    /* #swagger.description = "Find a particular actor by query"
+    #swagger.tags = ["actors"] 
+    #swagger.parameters["body"] = {
+    in: "body",
+    description: "fieldName: value",
+    required: true,
+    type: "string",
+    }*/
+    try {
+        const query = req.body
+
+        if (!query || Object.keys(query).length === 0) {
+            return res.status(400).json({
+                success: false,
+                message: "Query parameters are required"
+            })
+        }
+
+        actorQuery = {}
+        
+        for (const key in query) {
+            if (key === "season") {
+                actorQuery[key] = { $in: query[key]}
+            } else if (key === "character") {
+                actorQuery[key] = { $regex: query[key], $options: "i"}
+            } else {
+                actorQuery[key] = query[key]
+            }
+        }
+        
+        const result = await Actor.find(actorQuery)
+
+        if (!result || result.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "No actor(s) found."
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            data: result
+        })
+    } catch (error) {
+        next(error)
+    }
+}
+module.exports = { findAll, findById, findByQuery }

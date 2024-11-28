@@ -6,3 +6,27 @@ GET http://localhost:3000/actors
 
 ###
 GET http://localhost:3000/actors/67460f8e4a6110ed95f34eda
+
+###
+POST  http://localhost:3000/actors/search
+Content-Type: application/json
+
+{
+    "character": "Miranda"
+}
+
+###
+POST  http://localhost:3000/actors/search
+Content-Type: application/json
+
+{
+    "gender": "female"
+}
+
+###
+POST  http://localhost:3000/actors/search
+Content-Type: application/json
+
+{
+    "nationality": "Canadian"
+}

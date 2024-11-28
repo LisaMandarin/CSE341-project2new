@@ -57,6 +57,37 @@
           }
         }
       }
+    },
+    "/actors/search": {
+      "post": {
+        "tags": [
+          "actors"
+        ],
+        "description": "Find a particular actor by query",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "fieldName: value",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
     }
   }
 }
