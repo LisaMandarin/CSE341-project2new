@@ -30,3 +30,18 @@ Content-Type: application/json
 {
     "nationality": "Canadian"
 }
+
+###
+POST http://localhost:3000/actors
+Content-Type: application/json
+
+{
+    "firstName": "new",
+    "lastName": "new",
+    "gender": "new",
+    "character": "new",
+    "dateOfBirth": "new",
+    "nationality": "new",
+    "firstAppearSeason": "new",
+    "season": "new"
+}

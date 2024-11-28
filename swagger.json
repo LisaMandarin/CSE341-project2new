@@ -21,6 +21,19 @@
         }
       }
     },
+    "/profile": {
+      "get": {
+        "tags": [
+          "profile"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/actors/": {
       "get": {
         "tags": [
@@ -32,6 +45,60 @@
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": [
+          "actors"
+        ],
+        "description": "Create a new actor",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "gender": {
+                  "example": "any"
+                },
+                "character": {
+                  "example": "any"
+                },
+                "dateOfBirth": {
+                  "example": "any"
+                },
+                "nationality": {
+                  "example": "any"
+                },
+                "firstAppearSeason": {
+                  "example": "any"
+                },
+                "seasons": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "security": [
+          {
+            "openID": []
+          }
+        ]
       }
     },
     "/actors/{id}": {

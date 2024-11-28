@@ -86,7 +86,7 @@ const findByQuery = async (req, res, next) => {
                 actorQuery[key] = query[key]
             }
         }
-        
+
         const result = await Actor.find(actorQuery)
 
         if (!result || result.length === 0) {
@@ -104,4 +104,48 @@ const findByQuery = async (req, res, next) => {
         next(error)
     }
 }
-module.exports = { findAll, findById, findByQuery }
+
+const createActor = async (req, res, next) => {
+    /* #swagger.description = "Create a new actor"
+    #swagger.tags = ["actors"]
+    #swagger.security = [ {openID: []}] */
+    try {
+        const {
+            firstName,
+            lastName,
+            gender,
+            character,
+            dateOfBirth,
+            nationality,
+            firstAppearSeason,
+            seasons
+        } = req.body
+
+        if (!firstName || !lastName || !gender || !character || !firstAppearSeason || !seasons) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid parameters: firstName, lastName, gender, character, firstAppearSeason, and seasons are required."
+            })   
+        }
+
+        const newActor = new Actor({
+            firstName,
+            lastName,
+            gender,
+            character,
+            dateOfBirth,
+            nationality,
+            firstAppearSeason,
+            seasons
+        })
+
+        const result = await newActor.save()
+        return res.status(201).json({
+            success: true,
+            data: result
+        })
+    } catch (error) {
+        next(error)
+    }
+}
+module.exports = { findAll, findById, findByQuery, createActor }
