@@ -6,7 +6,9 @@ const app = express()
 const port = process.env.PORT
 const mongodbURI = process.env.MONGODB_URI
 const connectDB = require("./models/index")
-const router = require("./Routes")
+const router = require("./routes/index")
+
+
 
 if (!port) {
     throw new Error("Port is not defined in the env file")
@@ -21,5 +23,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use("/", router)
+
+
 
 app.listen(port, () => {console.log(`Server application listening on port ${port}`)})
