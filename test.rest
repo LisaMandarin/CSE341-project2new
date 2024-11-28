@@ -1,1 +1,8 @@
+###
+GET http://localhost:3000/
+
+###
 GET http://localhost:3000/actors
+
+###
+GET http://localhost:3000/actors/67460f8e4a6110ed95f34eda

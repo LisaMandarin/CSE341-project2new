@@ -20,6 +20,43 @@
           }
         }
       }
+    },
+    "/actors/": {
+      "get": {
+        "tags": [
+          "actors"
+        ],
+        "description": "Retrieve all actors in the actors collection",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/actors/{id}": {
+      "get": {
+        "tags": [
+          "actors"
+        ],
+        "description": "Retrieve a particular actor by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
     }
   }
 }
