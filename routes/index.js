@@ -1,6 +1,7 @@
 const router = require("express").Router()
 const swaggerRouter = require("./swaggerRoute")
 const actorRouter = require("./actorRoute")
+const momentRouter = require("./momentRoute")
 const { requiresAuth } = require("express-openid-connect")
 
 
@@ -27,5 +28,6 @@ router.get("/profile", requiresAuth(), (req, res) => {
 
 router.use("/api-docs", swaggerRouter)
 router.use("/actors", actorRouter)
+router.use("/moments", momentRouter)
 
 module.exports = router

@@ -5,10 +5,10 @@
     "description": "This API allows users to manage the collection of actors and moments in the TV series -- Grey's Anatomy",
     "version": "1.0.0"
   },
-  "host": "cse341-project2new.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/": {
@@ -248,6 +248,237 @@
             "name": "body",
             "in": "body",
             "description": "fieldName: value",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/moments/": {
+      "get": {
+        "tags": [
+          "moments"
+        ],
+        "description": "Retrieve all moments in the moment collection",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "moments"
+        ],
+        "description": "Create a new moment",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "season": {
+                  "example": "any"
+                },
+                "episode": {
+                  "example": "any"
+                },
+                "title": {
+                  "example": "any"
+                },
+                "airDate": {
+                  "example": "any"
+                },
+                "plotSummary": {
+                  "example": "any"
+                },
+                "youtubeURL": {
+                  "example": "any"
+                },
+                "actors": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "security": [
+          {
+            "openID": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "moments"
+        ],
+        "description": "Delete all moments in the moment collection",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "openID": []
+          }
+        ]
+      }
+    },
+    "/moments/{id}": {
+      "get": {
+        "tags": [
+          "moments"
+        ],
+        "description": "Retrieve a particular moment by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "moments"
+        ],
+        "description": "Update a particular moment by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "season": {
+                  "example": "any"
+                },
+                "episode": {
+                  "example": "any"
+                },
+                "title": {
+                  "example": "any"
+                },
+                "airDate": {
+                  "example": "any"
+                },
+                "plotSummary": {
+                  "example": "any"
+                },
+                "youtubeURL": {
+                  "example": "any"
+                },
+                "actors": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "openID": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "moments"
+        ],
+        "description": "Delete a particular moment by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "openID": []
+          }
+        ]
+      }
+    },
+    "/moments/search": {
+      "post": {
+        "tags": [
+          "moments"
+        ],
+        "description": "Find a particular moment by query",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "fieldName : value",
             "required": true,
             "schema": {
               "type": "object",
