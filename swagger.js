@@ -5,9 +5,9 @@ const doc = {
         title: "My API",
         description: "This API allows users to manage the collection of actors and moments in the TV series -- Grey's Anatomy"
     },
-    // host: "cse341-project2new.onrender.com",
-    host:"localhost:3000",
-    // schemes: ['https'],
+    host: "cse341-project2new.onrender.com",
+    // host:"localhost:3000",
+    schemes: ['https'],
     components: {
         securitySchemes: {
             oAuth: {

@@ -5,10 +5,10 @@
     "description": "This API allows users to manage the collection of actors and moments in the TV series -- Grey's Anatomy",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-project2new.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
