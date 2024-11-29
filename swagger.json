@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Description",
+    "description": "This API allows users to manage the collection of actors and moments in the TV series -- Grey's Anatomy",
     "version": "1.0.0"
   },
   "host": "cse341-project2new.onrender.com",
@@ -99,6 +99,25 @@
             "openID": []
           }
         ]
+      },
+      "delete": {
+        "tags": [
+          "actors"
+        ],
+        "description": "Delete all actors in the actors collection",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "openID": []
+          }
+        ]
       }
     },
     "/actors/{id}": {
@@ -123,6 +142,99 @@
             "description": "Bad Request"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "actors"
+        ],
+        "description": "Update a particular actor by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "gender": {
+                  "example": "any"
+                },
+                "character": {
+                  "example": "any"
+                },
+                "dateOfBirth": {
+                  "example": "any"
+                },
+                "nationality": {
+                  "example": "any"
+                },
+                "firstAppearSeason": {
+                  "example": "any"
+                },
+                "seasons": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "openID": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "actors"
+        ],
+        "description": "Delete a particular actor by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "openID": []
+          }
+        ]
       }
     },
     "/actors/search": {
@@ -156,5 +268,24 @@
         }
       }
     }
-  }
+  },
+  "components": {
+    "securitySchemes": {
+      "oAuth": {
+        "type": "oauth2",
+        "description": "This API uses OAuth 2 with the implicit grant flow.",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://dev-uecjmd1r2nd5b6cq.jp.auth0.com/authorize",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "oAuth": []
+    }
+  ]
 }

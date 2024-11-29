@@ -1,0 +1,93 @@
+[
+    {
+      "season": 1,
+      "episode": 1,
+      "title": "A Hard Day's Night",
+      "airDate": "2005-03-27",
+      "plotSummary": "Meredith begins her journey at Seattle Grace, meeting fellow interns and performing her first surgery.",
+      "youtubeURL": "https://www.youtube.com/watch?v=XYZ123",
+      "actors": ["Ellen Pompeo", "Sandra Oh", "Patrick Dempsey", "Justin Chambers", "Chandra Wilson"]
+    },
+    {
+      "season": 2,
+      "episode": 5,
+      "title": "Bring the Pain",
+      "airDate": "2005-10-23",
+      "plotSummary": "Meredith delivers a heartfelt ultimatum to Derek: 'Pick me, choose me, love me.'",
+      "youtubeURL": "https://www.youtube.com/watch?v=ABC456",
+      "actors": ["Ellen Pompeo", "Patrick Dempsey"]
+    },
+    {
+      "season": 5,
+      "episode": 24,
+      "title": "Now or Never",
+      "airDate": "2009-05-14",
+      "plotSummary": "The interns discover George's shocking identity as a John Doe patient after his heroic sacrifice.",
+      "youtubeURL": "https://www.youtube.com/watch?v=DEF789",
+      "actors": ["T.R. Knight", "Ellen Pompeo", "Sandra Oh", "Chandra Wilson", "Justin Chambers"]
+    },
+    {
+      "season": 6,
+      "episode": 24,
+      "title": "Death and All His Friends",
+      "airDate": "2010-05-20",
+      "plotSummary": "A shooter terrorizes the hospital, leaving Meredith devastated by Derek's critical condition.",
+      "youtubeURL": "https://www.youtube.com/watch?v=GHI012",
+      "actors": ["Ellen Pompeo", "Patrick Dempsey", "Sandra Oh", "Chandra Wilson", "James Pickens Jr."]
+    },
+    {
+      "season": 8,
+      "episode": 24,
+      "title": "Flight",
+      "airDate": "2012-05-17",
+      "plotSummary": "A plane crash leaves the doctors stranded, with Lexie's death marking a heartbreaking moment.",
+      "youtubeURL": "https://www.youtube.com/watch?v=JKL345",
+      "actors": ["Chyler Leigh", "Ellen Pompeo", "Eric Dane", "Sandra Oh", "Patrick Dempsey"]
+    },
+    {
+      "season": 11,
+      "episode": 21,
+      "title": "How to Save a Life",
+      "airDate": "2015-04-23",
+      "plotSummary": "Derek Shepherd dies after a tragic car accident, leaving fans in shock and Meredith a widow.",
+      "youtubeURL": "https://www.youtube.com/watch?v=MNO678",
+      "actors": ["Patrick Dempsey", "Ellen Pompeo"]
+    },
+    {
+      "season": 2,
+      "episode": 27,
+      "title": "Losing My Religion",
+      "airDate": "2006-05-15",
+      "plotSummary": "Denny Duquette dies after Izzie's desperate attempt to save him, leaving the team grieving.",
+      "youtubeURL": "https://www.youtube.com/watch?v=PQR901",
+      "actors": ["Katherine Heigl", "Sara Ramirez", "Sandra Oh", "Ellen Pompeo", "Justin Chambers"]
+    },
+    {
+      "season": 3,
+      "episode": 25,
+      "title": "Didn't We Almost Have It All?",
+      "airDate": "2007-05-17",
+      "plotSummary": "Cristina's wedding to Burke falls apart as she realizes she cannot go through with it.",
+      "youtubeURL": "https://www.youtube.com/watch?v=STU234",
+      "actors": ["Sandra Oh", "Isaiah Washington", "Ellen Pompeo"]
+    },
+    {
+      "season": 10,
+      "episode": 24,
+      "title": "Fear (of the Unknown)",
+      "airDate": "2014-05-15",
+      "plotSummary": "Cristina bids an emotional farewell as she leaves for Zurich, ending an iconic chapter.",
+      "youtubeURL": "https://www.youtube.com/watch?v=VWX567",
+      "actors": ["Sandra Oh", "Ellen Pompeo"]
+    },
+    {
+      "season": 15,
+      "episode": 19,
+      "title": "Silent All These Years",
+      "airDate": "2019-03-28",
+      "plotSummary": "Jo helps a sexual assault survivor, with the staff lining the hallways in a powerful display of support.",
+      "youtubeURL": "https://www.youtube.com/watch?v=YZA890",
+      "actors": ["Camilla Luddington", "Ellen Pompeo", "Chandra Wilson"]
+    }
+]
+  
